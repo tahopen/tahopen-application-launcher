@@ -9,7 +9,7 @@
   </parent>
   <groupId>org.tahopen</groupId>
   <artifactId>tahopen-application-launcher</artifactId>
-  <version>10.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0-SNAPSHOT</version>
   <name>Pentaho Application Launcher</name>
   <description></description>
   <licenses>
