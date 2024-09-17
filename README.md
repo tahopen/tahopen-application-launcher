@@ -1,10 +1,10 @@
-# Hitachi Vantara Application Launcher #
+# Tahopen Application Launcher #
  
 
 How to build
 --------------
 
-Pentaho Application Launcher uses the maven framework. 
+Tahopen Application Launcher uses the maven framework. 
 
 
 #### Pre-requisites for building the project:
