@@ -5,13 +5,14 @@
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>tahopen-ce-jar-parent-pom</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
   <groupId>org.tahopen</groupId>
   <artifactId>tahopen-application-launcher</artifactId>
-  <version>0.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0</version>
   <name>Tahopen Application Launcher</name>
   <description></description>
+  
   <licenses>
     <license>
       <name>GNU Lesser General Public License, Version 2.1</name>
@@ -20,11 +21,7 @@
       <comments></comments>
     </license>
   </licenses>
-<!--
-  <scm>
-    <developerConnection>scm:git:git@github.com:pentaho/pentaho-application-launcher.git</developerConnection>
-  </scm>
- --> 
+
   <properties>
     <mockito-all.version>1.9.5</mockito-all.version>
   </properties>
@@ -38,6 +35,46 @@
   </dependencies>
   <build>
     <plugins>
+    
+      <!-- Generate java docs -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- sign key gpg--> 
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- publish to Maven Central --> 
+      <plugin>
+         <groupId>org.sonatype.central</groupId>
+         <artifactId>central-publishing-maven-plugin</artifactId>
+         <version>0.6.0</version>
+         <extensions>true</extensions>
+         <configuration>
+           <publishingServerId>maven-central-snapshots</publishingServerId>
+         </configuration>
+      </plugin>    
+        
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <configuration>
@@ -52,14 +89,18 @@
     </plugins>
   </build>
 
+  <distributionManagement>
 
-  <repositories>
-
-  </repositories>
-
-  <pluginRepositories>
-
-  </pluginRepositories>
-
-
+     <repository>
+       <id>ossrh</id>
+       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+     </repository>
+    
+     <snapshotRepository>
+       <id>ossrh</id>
+       <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+     </snapshotRepository>
+    
+  </distributionManagement>  
+  
 </project>
