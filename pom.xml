@@ -22,6 +22,12 @@
     </license>
   </licenses>
 
+ <scm>
+    <connection>scm:git:git://github.com/tahopen/tahopen-application-launcher.git</connection>
+    <developerConnection>scm:git:git@github.com:tahopen/tahopen-application-launcher.git</developerConnection>
+    <url>https://github.com/tahopen/tahopen-application-launcher</url>
+</scm>  
+
   <properties>
     <mockito-all.version>1.9.5</mockito-all.version>
   </properties>
@@ -33,6 +39,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
   <build>
     <plugins>
     
@@ -86,8 +93,25 @@
           </archive>
         </configuration>
       </plugin>
+      
     </plugins>
   </build>
+
+  <organization>
+    <name>Tahopen Project</name>
+    <url>http://www.tahopen.org</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <name>Tahopen Build Team</name>
+      <email>marcio@tahopen.org</email>
+      <roles>
+        <role>creator</role>
+        <role>maintainer</role>
+      </roles>
+    </developer>
+  </developers>
 
   <distributionManagement>
 
