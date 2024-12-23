@@ -11,7 +11,7 @@
   <artifactId>tahopen-application-launcher</artifactId>
   <version>0.1.0.0</version>
   <name>Tahopen Application Launcher</name>
-  <description></description>
+  <description>A Tahopen Application Launcher</description>
   
   <licenses>
     <license>
@@ -22,11 +22,11 @@
     </license>
   </licenses>
 
- <scm>
+  <scm>
     <connection>scm:git:git://github.com/tahopen/tahopen-application-launcher.git</connection>
     <developerConnection>scm:git:git@github.com:tahopen/tahopen-application-launcher.git</developerConnection>
     <url>https://github.com/tahopen/tahopen-application-launcher</url>
-</scm>  
+  </scm>  
 
   <properties>
     <mockito-all.version>1.9.5</mockito-all.version>
@@ -81,7 +81,7 @@
            <publishingServerId>maven-central-snapshots</publishingServerId>
          </configuration>
       </plugin>    
-        
+
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <configuration>
@@ -93,7 +93,7 @@
           </archive>
         </configuration>
       </plugin>
-      
+
     </plugins>
   </build>
 
