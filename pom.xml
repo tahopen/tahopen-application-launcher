@@ -58,6 +58,7 @@
       </plugin>
 
       <!-- sign key gpg--> 
+<!-- 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-gpg-plugin</artifactId>
@@ -70,8 +71,9 @@
           </execution>
         </executions>
       </plugin>
-
+-->
       <!-- publish to Maven Central --> 
+<!--     
       <plugin>
          <groupId>org.sonatype.central</groupId>
          <artifactId>central-publishing-maven-plugin</artifactId>
@@ -81,7 +83,7 @@
            <publishingServerId>maven-central-snapshots</publishingServerId>
          </configuration>
       </plugin>    
-
+-->
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <configuration>
